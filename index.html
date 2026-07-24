@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio professionnel moderne et interactif de développeur créatif avec animations fluides et design haut de gamme.">
+    <title>Portfolio ADOBAYA Samuel</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+    <!-- Preloader Overlay -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="logo-dot"></span>
+                <span class="preloader-text">SAMUEL.DEV</span>
+            </div>
+            <div class="preloader-bar-container">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Effet de fond lumineux interactif -->
+    <div id="bg-glow" class="bg-glow"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- En-tête / Navigation Glassmorphic -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#accueil" class="logo" id="logo-link">
+                <span class="logo-dot"></span>
+                <span class="logo-text">SAMUEL.DEV</span>
+                <div>
+                <img src="./assets/images/Gemini_Generated_Image_oapwyroapwyroapw.png" alt="samuel" width="30px" style="border-radius: 50%;"></div>
+            </a>
+            
+            <!-- Menu Burger pour Mobile -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#accueil" class="nav-link active" id="nav-link-accueil">Accueil</a></li>
+                    <li><a href="#competences" class="nav-link" id="nav-link-competences">Compétences</a></li>
+                    <li><a href="#formation" class="nav-link" id="nav-link-formation">Formation</a></li>
+                    <li><a href="#projet" class="nav-link" id="nav-link-projet">Projets</a></li>
+                    <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECTION 1 : ACCUEIL -->
+    <section id="accueil" class="hero-section section-scroll">
+        <div class="hero-content">
+            <div class="badge fade-in" id="hero-badge">Disponible pour de nouveaux projets</div>
+            <h1 class="hero-title fade-in">
+                Bonjour, je suis <span class="accent-text text-glow">Samuel</span><br>
+                <span class="typewriter" id="typewriter" data-words='["Développeur Fullstack", "Designer UI/UX", "Créateur d&apos;Expériences"]'></span><span class="cursor">|</span>
+            </h1>
+            <p class="hero-subtitle fade-in" id="hero-desc">
+                Je conçois et développe des sites web modernes, alliant une esthétique minimaliste à des technologies robustes et des animations fluides.
+            </p>
+            <div class="hero-actions fade-in" id="hero-btns">
+                <a href="#projet" class="btn btn-primary" id="btn-projects">
+                    <span>Voir mes projets</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary" id="btn-contact-hero">
+                    <span>Me contacter</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Indicateur de scroll -->
+        <a href="#competences" class="scroll-indicator" aria-label="Faire défiler vers le bas">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="arrow"></span>
+        </a>
+    </section>
+
+    <!-- SECTION 2 : COMPÉTENCES -->
+    <section id="competences" class="competences-section section-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Compétences</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Les outils et technologies que j'utilise pour donner vie à vos projets.</p>
+            </div>
+
+            <!-- Filtres de compétences -->
+            <div class="skills-filter" id="skills-filter-container">
+                <button class="filter-btn active" data-filter="all" id="filter-all">Tout</button>
+                <button class="filter-btn" data-filter="frontend" id="filter-frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend" id="filter-backend">Backend</button>
+                <button class="filter-btn" data-filter="tools" id="filter-tools">Design & Outils</button>
+            </div>
+
+            <!-- Grille de compétences -->
+            <div class="skills-grid" id="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-card reveal" data-category="frontend" id="skill-html">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">HTML5 / CSS3</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-progress="95%"></div>
+                    </div>
+                    <span class="skill-percentage">95%</span>
+                </div>
+
+                <div class="skill-card reveal" data-category="frontend" id="skill-js">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                            <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                            <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">JavaScript (ES6+)</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-progress="70%"></div>
+                    </div>
+                    <span class="skill-percentage">70%</span>
+                </div>
+
+                <div class="skill-card reveal" data-category="frontend" id="skill-react">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                            <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"></line>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">React / Next.js</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-progress="55%"></div>
+                    </div>
+                    <span class="skill-percentage">55%</span>
+                </div>
+                <div class="skill-card reveal" data-category="frontend" id="skill-tailwind">
+    <div class="skill-icon-wrapper">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Vague supérieure -->
+            <path d="M12 3c-1.2 0-2.4.6-3.6 1.8L3 10.2c-1.2 1.2-1.2 3 0 4.2l1.2 1.2c1.2 1.2 3 1.2 4.2 0l1.8-1.8c1.2-1.2 3-1.2 4.2 0l1.2 1.2c1.2 1.2 1.2 3 0 4.2l-1.8 1.8c-1.2 1.2-1.2 3 0 4.2h3c1.2 0 2.4-.6 3.6-1.8l5.4-5.4c1.2-1.2 1.2-3 0-4.2l-1.2-1.2c-1.2-1.2-3-1.2-4.2 0l-1.8 1.8c-1.2 1.2-3 1.2-4.2 0l-1.2-1.2c-1.2-1.2-1.2-3 0-4.2l1.8-1.8c1.2-1.2 1.2-3 0-4.2H12z"></path>
+        </svg>
+    </div>
+    <h3 class="skill-name">Tailwind CSS</h3>
+    <div class="skill-bar-container">
+        <div class="skill-bar" data-progress="60%"></div>
+    </div>
+    <span class="skill-percentage">60%</span>
+</div>
+<div class="skill-card reveal" data-category="backend" id="skill-python">
+    <div class="skill-icon-wrapper">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Serpent du haut -->
+            <path d="M12 2H9a5 5 0 0 0-5 5v3a3 3 0 0 0 3 3h5a2 2 0 0 1 2 2v2a3 3 0 0 1-3 3H5"></path>
+            <!-- Serpent du bas -->
+            <path d="M12 22h3a5 5 0 0 0 5-5v-3a3 3 0 0 0-3-3h-5a2 2 0 0 1-2-2V7a3 3 0 0 1 3-3h7"></path>
+            <!-- Yeux -->
+            <circle cx="7" cy="6" r="0.5" fill="currentColor"></circle>
+            <circle cx="17" cy="18" r="0.5" fill="currentColor"></circle>
+        </svg>
+    </div>
+    <h3 class="skill-name">Python</h3>
+    <div class="skill-bar-container">
+        <div class="skill-bar" data-progress="50%"></div>
+    </div>
+    <span class="skill-percentage">50%</span>
+</div>
+<div class="skill-card reveal" data-category="backend" id="skill-java">
+    <div class="skill-icon-wrapper">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Tasse -->
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <!-- Vapeur -->
+            <line x1="6" y1="2" x2="6" y2="5"></line>
+            <line x1="10" y1="1" x2="10" y2="5"></line>
+            <line x1="14" y1="2" x2="14" y2="5"></line>
+        </svg>
+    </div>
+    <h3 class="skill-name">Java</h3>
+    <div class="skill-bar-container">
+        <div class="skill-bar" data-progress="75%"></div>
+    </div>
+    <span class="skill-percentage">75%</span>
+</div>
+
+                <!-- Backend -->
+                <div class="skill-card reveal" data-category="backend" id="skill-node">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"></path>
+                            <path d="M12 12v10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Node.js / Express</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-progress="50%"></div>
+                    </div>
+                    <span class="skill-percentage">50%</span>
+                </div>
+
+                <div class="skill-card reveal" data-category="backend" id="skill-db">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">SQL & NoSQL</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-progress="65%"></div>
+                    </div>
+                    <span class="skill-percentage">65%</span>
+                </div>
+
+                <!-- Tools & Design -->
+                <div class="skill-card reveal" data-category="tools" id="skill-figma">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22a7 7 0 0 0 5-16.71V2h-3v14a4 4 0 0 1-8 0V5H3v11a7 7 0 0 0 9 6z"></path>
+                            <circle cx="7" cy="5" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Figma / UI Design</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-progress="80%"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                   <div class="skill-card reveal" data-category="tools" id="skill-android-studio">
+    <div class="skill-icon-wrapper">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18a6 6 0 0 1 12 0v1H6v-1z"></path>
+            <circle cx="9" cy="13" r="1" fill="currentColor"></circle>
+            <circle cx="15" cy="13" r="1" fill="currentColor"></circle>
+            <line x1="8" y1="9" x2="5" y2="5"></line>
+            <line x1="16" y1="9" x2="19" y2="5"></line>
+        </svg>
+    </div>
+    <h3 class="skill-name">Android Studio</h3>
+    <div class="skill-bar-container">
+        <div class="skill-bar" data-progress="60%"></div>
+    </div>
+    <span class="skill-percentage">60%</span>
+</div>
+<div class="skill-card reveal" data-category="tools" id="skill-claude-code">
+    <div class="skill-icon-wrapper">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 17l6-5-6-5"></path>
+            <path d="M12 19h8"></path>
+            <path d="M19 5l-1 2.5L15.5 8 18 9l1 2.5 1-2.5 2.5-1-2.5-1z"></path>
+        </svg>
+    </div>
+    <h3 class="skill-name">Claude Code</h3>
+    <div class="skill-bar-container">
+        <div class="skill-bar" data-progress="45%"></div>
+    </div>
+    <span class="skill-percentage">45%</span>
+</div>
+                <div class="skill-card reveal" data-category="tools" id="skill-git">
+                    <div class="skill-icon-wrapper">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="18" cy="18" r="3"></circle>
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <line x1="6" y1="9" x2="6" y2="15"></line>
+                            <path d="M9 18h6a3 3 0 0 0 3-3V9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Git & DevOps</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-progress="88%"></div>
+                    </div>
+                    <span class="skill-percentage">88%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 : FORMATION -->
+    <section id="formation" class="formation-section section-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ma Formation</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Mon parcours académique et professionnel.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline" id="formation-timeline">
+                
+                <div class="timeline-item reveal" id="timeline-item-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 - 2028</div>
+                    <div class="timeline-content">
+                       <h3>Bachelor Développeur d'Applications</h3>
+<span class="institution">ITIC Paris, Paris 11ème</span>
+<p>Spécialisation dans la conception et le développement d'applications multiplateformes (bureau, mobiles et web). Approfondissement de la programmation orientée objet, de l'architecture logicielle, de la sécurité applicative et de la gestion de bases de données relationnelles et non relationnelles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal" id="timeline-item-2">
+    <div class="timeline-dot"></div>
+    <div class="timeline-date">Juillet 2026 - Septembre 2026</div>
+    <div class="timeline-content">
+        <h3>Développeur Full Stack & Cloud C# / Azure</h3>
+        <span class="institution">Markethings, La Garenne-Colombes</span>
+        <p>Création d'un environnement d'intégration et de recette sur Azure pour la plateforme SaaS. Développement d'évolutions applicatives en C# et .NET, incluant l'intégration de la classification NAF 2025, un module de recherche IA et un formulaire dynamique de choix des métiers, avant déploiement en production.</p>
+    </div>
+</div>
+                <div class="timeline-item reveal" id="timeline-stage-boulangerie">
+    <div class="timeline-dot"></div>
+    <div class="timeline-date">Mai - Juin 2026</div>
+    <div class="timeline-content">
+        <h3>Stage de 1ère année — Développeur Web</h3>
+        <span class="institution">Boulangerie Artisanale JR</span>
+        <p>Analyse des besoins et développement complet d'un site vitrine dynamique sur mesure. Conception d'une interface responsive, création d'une base de données SQL pour le catalogue de produits, optimisation du référencement (SEO) local et déploiement en production.</p>
+    </div>
+</div>
+
+                <div class="timeline-item reveal" id="timeline-item-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 - 2026</div>
+                    <div class="timeline-content">
+<h3>BTS SIO option SLAM — 1ère année</h3>
+<span class="institution">ITIC Paris, Paris 11ème</span>
+<p>Première année de Brevet de Technicien Supérieur (Services Informatiques aux Organisations). Apprentissage des fondamentaux du développement d'applications, de la modélisation et gestion de bases de données (SQL), de la programmation orientée objet (Java, Python) et de l'intégration web (HTML, CSS, JavaScript).</p>
+                                </div>
+                </div>
+
+                <div class="timeline-item reveal" id="timeline-item-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024-2025</div>
+                    <div class="timeline-content">
+                        <h3>Baccalauréat Général, Série D</h3>
+                        <span class="institution">Lycée vogan 1, TOGO</span>
+                        <p>Diplôme scientifique axé sur les sciences physiques, la chimie et les sciences de la vie et de la Terre (SVT). Première initiation au raisonnement logique, à la résolution de problèmes complexes et au traitement méthodique de données scientifiques.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 : PROJET -->
+    <section id="projet" class="projets-section section-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Projets</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Une sélection de travaux récents montrant mon expertise technique.</p>
+            </div>
+
+            <!-- Filtres de projets -->
+            <div class="projects-filter" id="projects-filter-container">
+                <button class="filter-btn active" data-filter="all" id="proj-filter-all">Tout</button>
+                <button class="filter-btn" data-filter="web" id="proj-filter-web">Web App</button>
+                <button class="filter-btn" data-filter="mobile" id="proj-filter-mobile">Mobile</button>
+                <button class="filter-btn" data-filter="saas" id="proj-filter-saas">SaaS</button>
+            </div>
+
+            <!-- Grille de projets -->
+            <div class="projects-grid" id="projects-grid">
+                
+                <!-- Projet 1 -->
+                <div class="project-card reveal" data-category="web" id="project-card-1">
+                    <div class="project-image-wrapper">
+                        <img src="./assets/images/accueil.PNG" alt="site vitrine RO-Royal" class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-action-link" id="proj1-demo-link" aria-label="Voir la démo en direct">
+                                <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Web App</span>
+                        <h3 class="project-title">RO-ROYAL – Le Royaume de l'Élégance</h3>
+                        <p class="project-description">Concept prestigieux à Lomé fusionnant textile sur-mesure et grooming de luxe. Entre tradition et modernité, l'espace propose des étoffes rares (Velours Ébène, Soie Royale) et célèbre l'excellence artisanale pour une expérience digne de la royauté.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card reveal" data-category="web" id="project-card-2">
+                    <div class="project-image-wrapper">
+                        <img src="./assets/images/ahsvanth.PNG" alt="Crypto Wallet Mobile" class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-action-link" id="proj2-demo-link" aria-label="Voir la démo de l'application">
+                                <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Web App</span>
+                        <h3 class="project-title">Boulangerie artisanale JR</h3>
+                        <p class="project-description">Une fusion unique entre tradition française et modernité. Chaque création y est façonnée à la main avec rigueur et excellence : pains de caractère, viennoiseries au feuilletage parfait et pâtisseries fines pour un moment de pure distinction.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+             <div class="project-card reveal" data-category="saas" id="project-card-3">
+    <div class="project-image-wrapper">
+        <img src="assets/images/markethings.PNG" alt="Évolution Plateforme SaaS Markethings" class="project-image">
+        <div class="project-overlay">
+            <a href="https://www.markethings.io" target="_blank" class="project-action-link" id="proj3-demo-link" aria-label="Visiter la plateforme Markethings">
+                <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="project-info">
+        <span class="project-tag">SaaS / Cloud • Juil - Sept 2026</span>
+        <h3 class="project-title">Markethings – Évolution SaaS & Azure</h3>
+        <p class="project-description">
+            Création d'un environnement de recette sur Azure et développement d'évolutions : recherche IA, migration NAF 2025 et formulaires métiers.
+        </p>
+        <div class="project-tech">
+            <span>C#</span>
+            <span>.NET</span>
+            <span>Azure</span>
+            <span>IA</span>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 : CONTACT -->
+    <section id="contact" class="contact-section section-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Me Contacter</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Discutons de votre projet et voyons comment je peux vous aider.</p>
+            </div>
+
+            <div class="contact-layout">
+                <!-- Infos de contact -->
+                <div class="contact-info-panel reveal" id="contact-info-panel">
+                    <h3>Discutons de votre vision</h3>
+                    <p class="contact-desc">
+                        N'hésitez pas à m'envoyer un message pour des collaborations, des opportunités d'emploi ou simplement pour dire bonjour. Je réponds généralement sous 24 heures.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon-wrapper">
+                                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span>Email</span>
+                                <a href="mailto:adobayayawosamuel63@gmail.com" id="email-link">adobayayawosamuel63@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon-wrapper">
+                                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span>Localisation</span>
+                                <p>Paris, France (Disponible en remote aussi)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Réseaux Sociaux -->
+                    <div class="social-links">
+                        <a href="https://github.com/adobayayawosamuel63-dot/" target="_blank" class="social-icon-btn" id="social-github" aria-label="Profil GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-svg">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/samuel-adobaya-86830139a/" target="_blank" class="social-icon-btn" id="social-linkedin" aria-label="Profil LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-svg">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                         </a>
+                       <!-- <a href="https://twitter.com" target="_blank" class="social-icon-btn" id="social-twitter" aria-label="Profil Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-svg">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a> -->
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form-panel reveal" id="contact-form-panel">
+<form action="https://formspree.io/f/xlgqjlpw"
+  method="POST" 
+  id="contact-form" 
+  class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" " class="form-input">
+                            <label for="name" class="form-label">Votre nom</label>
+                            <span class="form-line"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" " class="form-input">
+                            <label for="email" class="form-label">Votre email</label>
+                            <span class="form-line"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" " class="form-input">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <span class="form-line"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder=" " class="form-input form-textarea"></textarea>
+                            <label for="message" class="form-label">Votre message</label>
+                            <span class="form-line"></span>
+                        </div>
+             <!-- Case à cocher pour le Portfolio -->
+                <div class="cgu-portfolio" style="margin: 15px 0; font-size: 13px; text-align: left; color: #555;">
+                    <input type="checkbox" id="cgu" name="cgu" required style="margin-right: 8px; cursor: pointer;">
+                    <label for="cgu" style="cursor: pointer;">
+                        En envoyant ce formulaire, j'accepte que mes données soient utilisées pour traiter ma demande de contact conformément aux <a style="color: rgb(11, 69, 230); text-decoration: underline;" href="./CONDITIONS GÉNÉRALES DE TRAITEMENT DES DONNÉES p.pdf" target="_blank">conditions générales.</a>
+                    </label>
+                </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="btn-submit-form">
+                            <span>Envoyer le message</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+           
+</form>
+                  
+                    
+                    <!-- Notification de soumission -->
+                    <div class="form-feedback" id="form-feedback">
+                        <div class="feedback-content">
+                            <div class="feedback-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Message envoyé avec succès !</h3>
+                            <p>Merci pour votre prise de contact. Je reviens vers vous très rapidement.</p>
+                            <button class="btn btn-secondary btn-sm" id="btn-reset-form">Envoyer un autre message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>&copy; 2025 SAMUEL.DEV. Conçu avec passion. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
